@@ -1,0 +1,2 @@
+# DK-20948
+The ICM20948/SAMG55 Dev Kit is compatible with the Atmel’s ATSAMG55-XPRO evaluation kit based on a SAM G55 Cortex™- M4 processor-based microcontrollers. The supported development tools are Atmel Studio and Embedded Debugger. The purpose of this solution is to allow sensor management and algorithm processing by using a standalone microcontroller. The ICM20948/SAMG55 solution is an embedded sensors combo (accelerometer &amp; gyroscope &amp; magnetometer) on chip, easy to integrate for users developing within the wearable and IoT space. 
