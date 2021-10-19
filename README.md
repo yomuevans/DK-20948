@@ -13,8 +13,8 @@ website (see Useful Links section above.)
 The systems pictured above are configured for I2C communication between the ATSAMG55 and the ICM20948.
 Jumper configurations -
 - Power (J1)
-o To power the Dev Kit via the EDBG USB port (J500), connect a jumper across pins 3 & 4.
-o To receive power via the FTDI USB port (CN6), connect a jumper across pins 5 & 6 (default).
+  o To power the Dev Kit via the EDBG USB port (J500), connect a jumper across pins 3 & 4.
+  o To receive power via the FTDI USB port (CN6), connect a jumper across pins 5 & 6 (default).
 Note: The second configuration (power over the FTDI port) is useful when the firmware has already been flashed and no
 debugging is required. This configuration allows only for only one USB connection, via the FTDI port.
 - I2C/SPI configuration (J2)
