@@ -84,12 +84,12 @@ has it’s own .a file.
 # OVERVIEW
 The following two projects are available:
 
- EMD-App – This application project demonstrates how to use TDK-InvenSense’s low-level drivers to control and retrieve
+ - EMD-App – This application project demonstrates how to use TDK-InvenSense’s low-level drivers to control and retrieve
 data from ICM devices. It encodes sensor events and sends them over the UART interface to be displayed by sensor-cli. The
 application uses the Core library and Algo libraries to generate a loadable binary.
 
- EMD-Core – This project includes low-level drivers and firmware code and generates the eMD Core library used by the
-EMD-APP.
+ - EMD-Core – This project includes low-level drivers and firmware code and generates the eMD Core library used by the
+ EMD-APP.
 
 # Choosing between SPI and I2C
 By default, I2C is used to communicate between ATSAMG55 and ICM device. This can be changed to SPI by setting #define
