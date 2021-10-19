@@ -147,7 +147,7 @@ Optional sensor features supported:
 - B2S
 - SMD
 
-#SYSTEM KNOWN ISSUES
+# SYSTEM KNOWN ISSUES
 - When any accelerometer-only sensor is already enabled (Accelerometer or Raw accelerometer) if a gyroscope-based
 sensor is enabled (Calibrated Gyroscope, Uncalibrated Gyroscope or Game Rotation Vector), system can stop reporting
 data for up to 50ms.
