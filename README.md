@@ -97,13 +97,15 @@ Full Scale Range (FSR) can be changed by updating the value of the corresponding
 Default FSR value are +/- 4g for accelerometer and +/- 2000dps for gyroscope.
 
 Supported FSR values are:
-• Gyroscope:
 
-o The variable to modify is: cfg_gyr_fsr.
-o 250dps, 500dps, 1000dps and 2000dps
-• Accelerometer:
-o The variable to modify is: cfg_acc_fsr.
-o 2g, 4g, 8g and 16g
+ Gyroscope:
+
+ The variable to modify is: cfg_gyr_fsr.
+ 250dps, 500dps, 1000dps and 2000dps
+
+ Accelerometer:
+ The variable to modify is: cfg_acc_fsr.
+ 2g, 4g, 8g and 16g
 
 Note: Accelerometer FSR is expressed in mg in the driver stack and application.
 The array cfg_mounting_matrix (for acc and gyro) is defined in sensor.c. Modifying the elements of the arrays will reconfigure
