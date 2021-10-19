@@ -81,9 +81,11 @@ has it’s own .a file.
 # BUILDING AND RUNNING SAMPLES APPLICATIONS
 # OVERVIEW
 The following two projects are available:
+
  EMD-App – This application project demonstrates how to use TDK-InvenSense’s low-level drivers to control and retrieve
 data from ICM devices. It encodes sensor events and sends them over the UART interface to be displayed by sensor-cli. The
 application uses the Core library and Algo libraries to generate a loadable binary.
+
  EMD-Core – This project includes low-level drivers and firmware code and generates the eMD Core library used by the
 EMD-APP.
 
@@ -105,8 +107,8 @@ Gyroscope:
 * 250dps, 500dps, 1000dps and 2000dps
 
  Accelerometer:
-o The variable to modify is: cfg_acc_fsr.
-o 2g, 4g, 8g and 16g
+* The variable to modify is: cfg_acc_fsr.
+* 2g, 4g, 8g and 16g
 
 Note: Accelerometer FSR is expressed in mg in the driver stack and application.
 The array cfg_mounting_matrix (for acc and gyro) is defined in sensor.c. Modifying the elements of the arrays will reconfigure
