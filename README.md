@@ -146,3 +146,14 @@ Optional sensor features supported:
 - BAC (Activity Classifier)
 - B2S
 - SMD
+
+#SYSTEM KNOWN ISSUES
+- When any accelerometer-only sensor is already enabled (Accelerometer or Raw accelerometer) if a gyroscope-based
+sensor is enabled (Calibrated Gyroscope, Uncalibrated Gyroscope or Game Rotation Vector), system can stop reporting
+data for up to 50ms.
+- 20x48 SPI slave interface speed should not be set higher than 2.5MHz to ensure sensor data consistency
+- When Accelerometer and Gyroscope are enabled both, with different sample rate. When the accelerometer is stopped,
+1 or 2 gyroscope sample are triggered with wrong rate.
+- The 20x48 contains two clock division stages, as we can see in the figure below. Because the DMP engine outputs the
+hw_freq as either 1125/(1+GYRO_DIV) or 1125/(1+ACCEL_DIV) or 1125/(2^MAG_DIV) based on priorities, there are
+certain limitations in terms of output data rates.
