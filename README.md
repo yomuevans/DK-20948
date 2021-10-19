@@ -66,12 +66,12 @@ o src:
  ASF: Shared Atmel system files.
  config: Shared config files.
  ICM*: Sensor specific files, main.[c,h], sensor.[c,h] and system.[c,h].
-o *.cproj: AtmelStudio project files for each of the supported sensors.
+* *.cproj: AtmelStudio project files for each of the supported sensors.
 - EMD-Core: Contains TDK driver files. These files are built into an archive libEMD-Core-ICM*.a. Each supported sensor
 has it’s own .a file.
-o config : The Makefiles used to create the sensor driver archives.
-o sources/Invn: TDK libraries source files.
-o *.cproj: AtmelStudio project files for each of the supported sensors.
+* config : The Makefiles used to create the sensor driver archives.
+* sources/Invn: TDK libraries source files.
+* *.cproj: AtmelStudio project files for each of the supported sensors.
 - scripts – Batch files for building and flashing release versions of the firmware for each sensor.
 - tools – The files required to run the host application sensor-cli.
 - EMD-G55-ICM*.atsln – Atmel Studio solution files for each of the supported sensors.
@@ -92,11 +92,13 @@ By default, I2C is used to communicate between ATSAMG55 and ICM device. This can
 USE_SPI_NOT_I2C define to 1 (can be found in system.h) and by removing the jumpers between pins 1 & 2 and pins 3 and 4 of
 J2 (as described above).
 Note: 20x48 SPI slave interface speed should not be set higher than 2.5MHz to ensure sensor data consistency
-4.2.4 Configuring the device
+
+Configuring the device
 Full Scale Range (FSR) can be changed by updating the value of the corresponding variables in sensor.c.
 Default FSR value are +/- 4g for accelerometer and +/- 2000dps for gyroscope.
 
 Supported FSR values are:
+
 Gyroscope:
 
 * The variable to modify is: cfg_gyr_fsr.
