@@ -97,8 +97,7 @@ Full Scale Range (FSR) can be changed by updating the value of the corresponding
 Default FSR value are +/- 4g for accelerometer and +/- 2000dps for gyroscope.
 
 Supported FSR values are:
-
- Gyroscope:
+Gyroscope:
 
 o The variable to modify is: cfg_gyr_fsr.
 o 250dps, 500dps, 1000dps and 2000dps
