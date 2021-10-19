@@ -135,3 +135,6 @@ Optional sensor features supported:
 - Step Counter
 - Tilt Detector
 - Pick-up Gesture
+- BAC (Activity Classifier)
+- B2S
+- SMD
