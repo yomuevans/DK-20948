@@ -71,9 +71,9 @@ The package is organized as follow
 * *.cproj: AtmelStudio project files for each of the supported sensors.
 - EMD-Core: Contains TDK driver files. These files are built into an archive libEMD-Core-ICM*.a. Each supported sensor
 has it’s own .a file.
-* config : The Makefiles used to create the sensor driver archives.
-* sources/Invn: TDK libraries source files.
-* *.cproj: AtmelStudio project files for each of the supported sensors.
+  - config : The Makefiles used to create the sensor driver archives.
+  - sources/Invn: TDK libraries source files.
+  - *.cproj: AtmelStudio project files for each of the supported sensors.
 - scripts – Batch files for building and flashing release versions of the firmware for each sensor.
 - tools – The files required to run the host application sensor-cli.
 - EMD-G55-ICM*.atsln – Atmel Studio solution files for each of the supported sensors.
