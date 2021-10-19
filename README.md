@@ -99,8 +99,8 @@ Default FSR value are +/- 4g for accelerometer and +/- 2000dps for gyroscope.
 Supported FSR values are:
 Gyroscope:
 
-o The variable to modify is: cfg_gyr_fsr.
-o 250dps, 500dps, 1000dps and 2000dps
+* The variable to modify is: cfg_gyr_fsr.
+* 250dps, 500dps, 1000dps and 2000dps
 
  Accelerometer:
 o The variable to modify is: cfg_acc_fsr.
