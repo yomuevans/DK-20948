@@ -114,3 +114,22 @@ Note: Accelerometer FSR is expressed in mg in the driver stack and application.
 The array cfg_mounting_matrix (for acc and gyro) is defined in sensor.c. Modifying the elements of the arrays will reconfigure
 the mounting matrix for the associated sensors.
 Default mounting matrix is set to identity which corresponds to the following reference frame:
+
+Supported sensor features
+- Raw accelerometer
+- Raw Gyroscope
+- Calibrated accelerometer
+- Calibrated gyroscope
+- Uncalibrated gyroscope
+- Game rotation vector
+- Gravity
+- Linear Acceleration
+Optional sensor features supported:
+- Calibrated magnetometer (Inbuilt AKM9916 only)
+- Uncalibrated magnetometer
+- Rotation vector
+- Geomagnetic rotation vector
+- Step Detector
+- Step Counter
+- Tilt Detector
+- Pick-up Gesture
