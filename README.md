@@ -95,6 +95,7 @@ Note: 20x48 SPI slave interface speed should not be set higher than 2.5MHz to en
 4.2.4 Configuring the device
 Full Scale Range (FSR) can be changed by updating the value of the corresponding variables in sensor.c.
 Default FSR value are +/- 4g for accelerometer and +/- 2000dps for gyroscope.
+
 Supported FSR values are:
 • Gyroscope:
 o The variable to modify is: cfg_gyr_fsr.
@@ -102,6 +103,7 @@ o 250dps, 500dps, 1000dps and 2000dps
 • Accelerometer:
 o The variable to modify is: cfg_acc_fsr.
 o 2g, 4g, 8g and 16g
+
 Note: Accelerometer FSR is expressed in mg in the driver stack and application.
 The array cfg_mounting_matrix (for acc and gyro) is defined in sensor.c. Modifying the elements of the arrays will reconfigure
 the mounting matrix for the associated sensors.
