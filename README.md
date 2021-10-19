@@ -63,11 +63,11 @@ The DK-20948 package includes all the necessary files to create a custom applica
 The package is organized as follow
 - doc: Document(s) describing the use of this firmware development platform.
 - EMD-App: contains sample firmware source and project files.
-o src:
- At the top level: Shared .c & .h files.
- ASF: Shared Atmel system files.
- config: Shared config files.
- ICM*: Sensor specific files, main.[c,h], sensor.[c,h] and system.[c,h].
+   o src:
+    At the top level: Shared .c & .h files.
+    ASF: Shared Atmel system files.
+    config: Shared config files.
+    ICM*: Sensor specific files, main.[c,h], sensor.[c,h] and system.[c,h].
 * *.cproj: AtmelStudio project files for each of the supported sensors.
 - EMD-Core: Contains TDK driver files. These files are built into an archive libEMD-Core-ICM*.a. Each supported sensor
 has it’s own .a file.
