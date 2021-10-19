@@ -63,8 +63,8 @@ The DK-20948 package includes all the necessary files to create a custom applica
 The package is organized as follow
 - doc: Document(s) describing the use of this firmware development platform.
 - EMD-App: contains sample firmware source and project files.
-   o src:
-    At the top level: Shared .c & .h files.
+  - o src:
+      - At the top level: Shared .c & .h files.
     ASF: Shared Atmel system files.
     config: Shared config files.
     ICM*: Sensor specific files, main.[c,h], sensor.[c,h] and system.[c,h].
