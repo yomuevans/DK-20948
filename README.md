@@ -157,3 +157,9 @@ data for up to 50ms.
 - The 20x48 contains two clock division stages, as we can see in the figure below. Because the DMP engine outputs the
 hw_freq as either 1125/(1+GYRO_DIV) or 1125/(1+ACCEL_DIV) or 1125/(2^MAG_DIV) based on priorities, there are
 certain limitations in terms of output data rates.
+
+For example, if one requests 100 Hz ODR from the accelerometer and 50 Hz ODR from the gyroscope, the actual output data
+rate of the accelerometer will be 112 Hz while the actual output data rate of the gyroscope will be 56 Hz. This happens because
+hw_freq = 1125/(1+GYRO_DIV)=1125/(1+9)=112.5Hz (the gyroscope has a higher priority than the accelerometer),
+ACC_DMP_DIV will be set to 1 and GYR_DMP_DIV will be set to 2. As such, the actual output data rate will always be greater
+than or equal to the requested output data rate.
