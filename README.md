@@ -40,7 +40,7 @@ below. In order to disable data logging across the UART, the INV_MSG_ENABLE macr
 rebuilt. If the verbose level needs to be changed, the INV_MSG_ENABLE macro needs to be overloaded with the new desired
 verbose level.
 
-![DK-20948] (https://github.com/yomuevans/DK-20948/blob/main/Images/eMD_Software_Guide_ICM20948.jpg?raw=true)
+![DK-20948](https://github.com/yomuevans/DK-20948/blob/main/Images/eMD_Software_Guide_ICM20948.jpg?raw=true)
 
 # SOFTWARE ENVIRONMENT
 # PREREQUISITE
