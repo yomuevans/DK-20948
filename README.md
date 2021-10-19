@@ -48,3 +48,61 @@ required:
 o To retrieve traces from provided FW application
 - Atmel Studio: http://www.atmel.com/tools/atmelstudio.aspx
 o To load FW binaries and access to the USB EDBG port of the SAMG55 Dev Kit
+
+
+# EMD DEVELOPER KIT TDK PACKAGES
+The following package is available:
+- eMD-SmartMotion_ICM20948_x.y.z.zip
+This example targets low performance microcontrollers with a very simple sensor application.
+Tools running on the PC for data display are available within the delivered package.
+
+# FW PACKAGE DESCRIPTION
+The DK-20948 package includes all the necessary files to create a custom application using an ICM20948 device.
+The package is organized as follow
+- doc: Document(s) describing the use of this firmware development platform.
+- EMD-App: contains sample firmware source and project files.
+o src:
+ At the top level: Shared .c & .h files.
+ ASF: Shared Atmel system files.
+ config: Shared config files.
+ ICM*: Sensor specific files, main.[c,h], sensor.[c,h] and system.[c,h].
+o *.cproj: AtmelStudio project files for each of the supported sensors.
+- EMD-Core: Contains TDK driver files. These files are built into an archive libEMD-Core-ICM*.a. Each supported sensor
+has it’s own .a file.
+o config : The Makefiles used to create the sensor driver archives.
+o sources/Invn: TDK libraries source files.
+o *.cproj: AtmelStudio project files for each of the supported sensors.
+- scripts – Batch files for building and flashing release versions of the firmware for each sensor.
+- tools – The files required to run the host application sensor-cli.
+- EMD-G55-ICM*.atsln – Atmel Studio solution files for each of the supported sensors.
+- release – contains precompiled elf and binary files
+
+
+# BUILDING AND RUNNING SAMPLES APPLICATIONS
+# OVERVIEW
+The following two projects are available:
+ EMD-App – This application project demonstrates how to use TDK-InvenSense’s low-level drivers to control and retrieve
+data from ICM devices. It encodes sensor events and sends them over the UART interface to be displayed by sensor-cli. The
+application uses the Core library and Algo libraries to generate a loadable binary.
+ EMD-Core – This project includes low-level drivers and firmware code and generates the eMD Core library used by the
+EMD-APP.
+
+# Choosing between SPI and I2C
+By default, I2C is used to communicate between ATSAMG55 and ICM device. This can be changed to SPI by setting #define
+USE_SPI_NOT_I2C define to 1 (can be found in system.h) and by removing the jumpers between pins 1 & 2 and pins 3 and 4 of
+J2 (as described above).
+Note: 20x48 SPI slave interface speed should not be set higher than 2.5MHz to ensure sensor data consistency
+4.2.4 Configuring the device
+Full Scale Range (FSR) can be changed by updating the value of the corresponding variables in sensor.c.
+Default FSR value are +/- 4g for accelerometer and +/- 2000dps for gyroscope.
+Supported FSR values are:
+• Gyroscope:
+o The variable to modify is: cfg_gyr_fsr.
+o 250dps, 500dps, 1000dps and 2000dps
+• Accelerometer:
+o The variable to modify is: cfg_acc_fsr.
+o 2g, 4g, 8g and 16g
+Note: Accelerometer FSR is expressed in mg in the driver stack and application.
+The array cfg_mounting_matrix (for acc and gyro) is defined in sensor.c. Modifying the elements of the arrays will reconfigure
+the mounting matrix for the associated sensors.
+Default mounting matrix is set to identity which corresponds to the following reference frame:
