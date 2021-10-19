@@ -90,6 +90,14 @@ application uses the Core library and Algo libraries to generate a loadable bina
 
  - EMD-Core – This project includes low-level drivers and firmware code and generates the eMD Core library used by the
  EMD-APP.
+ 
+# Default application behavior
+
+At initialization, the application will:
+- Initialize Atmel SAM G55 peripherals (IRQ, TIMER, SPI/I2C)
+- Configure the UART (Baud-rate 2M)
+- Initialize the drivers for the selected ICM device
+- Setup and initialize the ICM device
 
 # Choosing between SPI and I2C
 By default, I2C is used to communicate between ATSAMG55 and ICM device. This can be changed to SPI by setting #define
