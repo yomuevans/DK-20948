@@ -47,9 +47,9 @@ verbose level.
 To build and use the samples application provided as part for the DK-20948 Developer Kit packages, the following software is
 required:
 - An RS232 terminal emulator (such as Putty: http://www.putty.org/)
-o To retrieve traces from provided FW application
+  o To retrieve traces from provided FW application
 - Atmel Studio: http://www.atmel.com/tools/atmelstudio.aspx
-o To load FW binaries and access to the USB EDBG port of the SAMG55 Dev Kit
+  o To load FW binaries and access to the USB EDBG port of the SAMG55 Dev Kit
 
 
 # EMD DEVELOPER KIT TDK PACKAGES
