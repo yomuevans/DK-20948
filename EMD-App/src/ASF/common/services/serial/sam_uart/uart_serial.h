@@ -82,7 +82,8 @@ typedef struct uart_rs232_options {
 	uint32_t stopbits;
 
 } usart_rs232_options_t;
-
+/** This line provides an alias usart_serial_options_t for the usart_rs232_options_t structure. 
+This alias is used to make the code more readable and to emphasize that the same structure is used for serial communication options. **/
 typedef usart_rs232_options_t usart_serial_options_t;
 
 typedef Usart *usart_if;
